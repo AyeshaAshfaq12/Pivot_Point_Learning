@@ -1,0 +1,1118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* CSS Variables */
+
+:root {
+    --primary-color: #4b52e0;
+    --secondary-color: #1e1e1e;
+    --body-font-color: #000000;
+
+    --linear-gradient: linear-gradient(180deg, #552501 0%, #A54805 100%);
+
+    --font-family1: "Roboto", sans-serif;
+    --font-family2: "Playfair Display", serif;
+
+    --large-font-size: 2.81rem;
+    --medium-font-size: 1.875rem;
+    --font-size: 1.25rem;
+    --small-font-size: 1rem;
+    --extra-small-font-size: 0.8rem;
+
+
+    @media only screen and (max-width: 850px) {
+        --large-font-size: 2.5rem;
+        --medium-font-size: 1.5rem;
+        --font-size: 0.9rem;
+        --small-font-size: 0.75rem;
+    }
+
+    @media only screen and (max-width: 420px) {
+        --large-font-size: 2.1rem;
+        --medium-font-size: 1.4rem;
+        --font-size: 0.85rem;
+        --small-font-size: 0.7rem;
+    }
+}
+
+/*#region =========    General Layout   ============  */
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family2);
+}
+
+body {
+    background-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+/*#endregion  */
+
+
+/*#region =========    Utility Classes   ============  */
+
+
+/*#endregion  */
+
+
+/* ======================== INDEX PAGE =========================== */
+
+/*#region */
+
+/* ================= Header =================== */
+
+/*#region */
+
+header {}
+
+.navbar {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 36%;
+    padding-left: 6rem;
+}
+
+.logo a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo a img {
+    width: 15%;
+}
+
+.menu {
+    width: 64%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul li {
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu ul li a {
+    font-family: var(--font-family1);
+    display: block;
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 0 1.1rem;
+    font-size: var(--extra-small-font-size);
+    transition: all 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+.menu ul li a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.menu ul>li:hover>a {
+    color: var(--primary-color);
+}
+
+
+/*#endregion */
+
+
+/* ================= Hero Section =================== */
+
+/*#region */
+
+.hero-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .slideshow-container {
+    width: 100%;
+    height: 27rem;
+}
+
+.hero-section .mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-section .mySlides img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(55%);
+}
+
+.hero-section .nav-arrows {
+    width: inherit;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+}
+
+.hero-section .prev,
+.hero-section .next {
+    cursor: pointer;
+    margin-top: -22px;
+    color: #d7d7d7;
+    font-size: var(--font-size);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+}
+
+.hero-section .prev:hover,
+.hero-section .next:hover {
+    background-color: #9090906a;
+}
+
+.hero-section .text {
+    width: 100%;
+    position: absolute;
+    bottom: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: var(--font-family1);
+}
+
+.hero-section .text .heading {
+    font-size: var(--large-font-size);
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+
+.hero-section .text .sub-heading {
+    font-weight: 500;
+}
+
+.hero-section .dot-container {
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: absolute;
+    bottom: 20%;
+}
+
+.hero-section .dot {
+    cursor: pointer;
+    height: 0.2rem;
+    width: 1.6rem;
+    margin: 0 3px;
+    background-color: #a5a5a5;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+}
+
+.hero-section .active,
+.hero-section .dot:hover {
+    background-color: #fff;
+}
+
+.hero-section .domains {
+    background-color: #f2f3f4;
+    width: 100%;
+    padding: 1.7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hero-section .domains .field {
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .domains i {
+    font-size: var(--medium-font-size);
+    color: var(--primary-color);
+    margin-right: 1.2rem;
+}
+
+.hero-section .domains p {
+    width: 75%;
+    font-size: var(--small-font-size);
+    font-weight: 300;
+}
+
+/*#endregion */
+
+
+/* ================= Free Courses =================== */
+
+/*#region */
+
+.courses-section {
+    width: 100%;
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses-section .text {
+    margin-bottom: 3rem;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses-section .text .heading {
+    font-size: var(--medium-font-size);
+    margin-bottom: 0.6rem;
+}
+
+.courses-section .text .sub-heading {
+    color: #888888;
+    font-weight: 400;
+    text-align: center;
+    font-size: var(--small-font-size);
+}
+
+.courses-section .courses {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.courses-section .courses img {
+    width: 100%;
+    filter: brightness(65%);
+}
+
+.courses-section .course-grid {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.courses-section .course-grid .course-row {
+    width: 95%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.courses-section .course-grid .course {
+    height: 200px;
+}
+
+.courses-section .course-grid .course img {
+    height: 200px;
+}
+
+.courses-section .course-grid .large {
+    width: 50%;
+}
+
+.courses-section .course-grid .small {
+    width: 40%;
+}
+
+.courses-section .course-col {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses-section .course-col .course {
+    height: 417px;
+}
+
+.courses-section .course-col .course img {
+    height: 417px;
+}
+
+.courses-section .course .info {
+    position: relative;
+    top: -48%;
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.courses-section .course-col .course .info {
+    top: -24%;
+}
+
+.courses-section .course .info .tag {
+    background-color: var(--primary-color);
+    width: fit-content;
+    border-radius: 0.2rem;
+    padding: 0.1rem 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.courses-section .course .info .title {
+    margin-bottom: 0.4rem;
+}
+
+.courses-section .course .details {
+    display: flex;
+}
+
+.courses-section .course .details div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.6rem;
+}
+
+.courses-section .course .details div i {
+    font-size: var(--small-font-size);
+    margin-right: 0.5rem;
+}
+
+
+
+/*#endregion */
+
+
+/* ================= Limitless Learning =================== */
+
+/*#region */
+
+.limitless-learning {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.limitless-learning .text {
+    width: 43%;
+}
+
+.limitless-learning .text .heading {
+    font-size: var(--medium-font-size);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.limitless-learning .text .sub-heading {
+    font-size: var(--extra-small-font-size);
+}
+
+.limitless-learning .text .awards-success {
+    margin: 1rem 0;
+    margin-left: 4rem;
+    display: flex;
+}
+
+.limitless-learning .text .awards-success div {
+    display: flex;
+    flex-direction: column;
+}
+
+.limitless-learning .text div .number {
+    color: var(--primary-color);
+    font-size: var(--large-font-size);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.limitless-learning .text div .title {
+    font-weight: 500;
+}
+
+.limitless-learning .text div .description {
+    font-size: var(--extra-small-font-size);
+}
+
+.limitless-learning .img {
+    width: 35%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.limitless-learning .img img {
+    width: 100%;
+}
+
+
+
+/*#endregion */
+
+
+
+/* ================= Blogs Posts =================== */
+
+/*#region */
+
+.blog-posts{
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-posts .heading{
+    font-size: var(--medium-font-size);
+    margin-bottom: 0.7rem;
+}
+
+.blog-posts .sub-heading{
+    width: 60%;
+    color: #888888;
+    text-align: center;
+    font-size: var(--small-font-size);
+    margin-bottom: 2.5rem;
+}
+
+.blog-posts .posts-grid{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem 2rem;
+}
+
+.blog-posts .posts-grid .post{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-posts .posts-grid .post img{
+    width: 100%;
+    margin-bottom: 0.7rem;
+}
+
+.blog-posts .posts-grid .post .date{
+    color: #888888;
+    font-size: var(--extra-small-font-size);
+    margin-bottom: 0.7rem;
+}
+
+.blog-posts .posts-grid .post .title{
+    margin-bottom: 0.5rem;
+}
+
+.blog-posts .posts-grid .post .description{
+    color: #6b6b6b;
+    border-top: 1px solid #b4b4b4;
+    font-size: var(--extra-small-font-size);
+    padding-top: 0.5rem;
+}
+
+
+
+/*#endregion */
+
+
+
+/* ================= Instructor =================== */
+
+/*#region */
+
+.instructor{
+    background: url('../images/instructor2.jpg') no-repeat center/cover;
+    padding: 6rem 0;
+    background-color: #b5b5b5;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.instructor .heading{
+    font-size: var(--medium-font-size);
+    margin-bottom: 1rem;
+}
+
+.instructor .sub-heading{
+    width: 60%;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--font-family1);
+}
+
+.instructor a{
+    background-color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.2rem;
+    color: #000;
+    font-family: var(--font-family1);
+    font-weight: 500;
+}
+
+/*#endregion */
+
+
+/* ================= Footer =================== */
+
+/*#region */
+
+footer {
+    width: 100%;
+    color: #868686;
+    padding: 5rem 3rem;
+    background-color: #06021a;
+    display: block;
+}
+
+footer .menus {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .contact-us-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .contact-us-menu .subtitle {
+    margin-bottom: 1rem;
+}
+
+footer .contact-us-menu i {
+    font-size: var(--font-size);
+    margin-right: 0.8rem;
+}
+
+footer .contact-us-menu div {
+    margin-bottom: 1rem;
+    display: flex;
+    line-height: 1.5;
+}
+
+footer .contact-us-menu div p {
+    cursor: pointer;
+}
+
+footer a {
+    color: #868686;
+}
+
+footer li {
+    font-family: var(--font-family1);
+    margin: 0.5rem 0;
+}
+
+footer .container {
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+
+footer .columns {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .column .subtitle {
+    color: #fff;
+    font-size: var(--small-font-size);
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+footer .column p {
+    font-family: var(--font-family1);
+}
+
+footer .newsletter li {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+footer .newsletter input {
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+footer .newsletter i {
+    padding: 0.5rem;
+    color: #fff;
+    background-color: #4b52e0;
+}
+
+footer .social-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 1rem;
+}
+
+footer .social-links i{
+    color: var(--primary-color);
+    font-size: var(--medium-font-size);
+    margin: 0 0.5rem;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0 0;
+    font-family: var(--font-family1);
+}
+
+/*#endregion */
+
+
+/*#endregion */
+
+
+/* ======================== ABOUT PAGE =========================== */
+
+/*#region */
+
+.about-bg{
+    width: 100%;
+    background: url('../images/course3.jpg') no-repeat center/cover;
+    background-color: #959595;
+    background-blend-mode: multiply;
+    padding: 7rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.about-bg .heading{
+    font-size: var(--medium-font-size);
+    font-weight: 700;
+}
+
+.about-bg i{
+    margin: 0 0.4rem;
+}
+
+.mission{
+    width: 100%;
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #919191;
+}
+
+.mission .heading{
+    font-size: var(--medium-font-size);
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.mission .sub-heading{
+    margin-bottom: 3rem;
+}
+
+.mission .description {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mission .description p{
+    margin-bottom: 0.7rem;
+    font-family: var(--font-family1);
+}
+
+.mission .description .sub-title{
+    margin-top: 1rem;
+    font-family: var(--font-family2);
+    font-weight: 600;
+    color: #5d5d5d;
+}
+
+/*#endregion */
+
+
+
+/* ======================== RESOURCES / PERSONALIZED LEARNING PAGE =========================== */
+
+/*#region */
+
+.features-resources{
+    background-color: #f0f0f0;
+    padding: 4rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #0000003d 0px 3px 8px;
+}
+
+.features-resources .features{
+    padding: 2rem;
+    width: 70%;
+    background-color: #fff;
+    box-shadow: #0000003d 0px 3px 8px;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-resources .heading{
+    font-size: var(--medium-font-size);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.features-resources .features-grid{
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.features-resources .features-grid .feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c2c2c2;
+    border-radius: 0.2rem;
+}
+
+.features-resources .features-grid .img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+    background-color: #c5c5c5;
+    color: #8a8a8a;
+    font-size: var(--medium-font-size);
+    font-family: var(--font-family1);
+}
+
+.features-resources .features-grid .title{
+    font-size: var(--small-font-size);
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.features-resources .features-grid p{
+    width: 90%;
+    text-align: center;
+    font-size: var(--extra-small-font-size);
+    margin-bottom: 0.8rem;
+}
+
+
+/*#endregion */
+
+
+/* ======================== SURVEY1 PAGE =========================== */
+
+/*#region */
+
+.survey-bg{
+    width: 100%;
+    background: url('../images/course3.jpg') no-repeat center/cover;
+    background-color: #6e6e6e;
+    background-blend-mode: multiply;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.survey-bg .heading{
+    font-size: var(--medium-font-size);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.survey-bg .sub-heading{
+    margin-top: 1rem;
+    width: 52%;
+    font-size: var(--small-font-size);
+    font-family: var(--font-family1);
+    text-align: center;
+    color: #dedede;
+}
+
+.professional{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.professional form{
+    padding: 3rem 0;
+    width: 80%;
+}
+
+.professional form .heading{
+    font-size: var(--font-size);
+    font-weight: 600;
+    font-family: var(--font-family2);
+    color: #7a7a7a;
+}
+
+.professional form p{
+    font-family: var(--font-family1);
+}
+
+.professional form .section{
+    margin: 1rem 0;
+}
+
+.professional form input, 
+.professional form select,
+.professional form option,
+.professional form textarea{
+    margin-top: 0.4rem;
+    padding: 0.5rem 0;
+    outline: none;
+    border-radius: 0.2rem;
+    border: 1px solid #868686;
+    font-family: var(--font-family1);
+}
+
+.professional form label, 
+.professional form p{
+    font-size: var(--small-font-size);
+    font-family: var(--font-family1);
+    color: #868686;
+}
+
+.professional form textarea{
+    height: 5rem;
+}
+
+.professional form .section .heading{
+    margin-bottom: 0.3rem;
+}
+
+.professional form .personal{
+    display: flex;
+    flex-direction: column;
+}
+
+.professional form .personal .q-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.professional form .personal .row-input{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+}
+
+.professional form .personal .input input{
+    width: 100%;
+}
+
+.professional form .section .question{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.professional form .section .input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.6rem 0;
+}
+
+/*#endregion */
+
+
+
+/* ======================== CONTACT PAGE =========================== */
+
+/*#region */
+
+.contact-form{
+    padding: 6rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form form{
+    width: 75%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact-form form .contact-details{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form form .contact-details .contact-item{
+    margin: 0.6rem 0;
+    display: flex;
+}
+
+.contact-form form .contact-details .contact-item i{
+    color: var(--primary-color);
+    margin-top: 0.3rem;
+    margin-right: 0.7rem;
+}
+
+.contact-form form .contact-details .text{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form form .contact-details .text .title{
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.contact-form form .contact-details .text .sub-title{
+    font-family: var(--font-family1);
+    color: #9e9e9e;
+}
+
+.contact-form form .input-group{
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form form .input-group input{
+    margin: 0.35rem 0;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    outline: none;
+    border-radius: 0.2rem;
+    border: 1px solid #9b9b9b;
+    font-family: var(--font-family1);
+}
+
+.contact-form form .message{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form form .message textarea{
+    margin-top: 0.3rem;
+    width: 100%;
+    height: 9.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid #9b9b9b;
+
+}
+
+.contact-form form .message textarea::placeholder{
+    padding: 0.7rem 1rem;
+    font-family: var(--font-family1);
+}
+
+.contact-form .btn{
+    width: 75%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.contact-form .btn button{
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 0.2rem;
+}
+
+
+
+
+/*#endregion */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

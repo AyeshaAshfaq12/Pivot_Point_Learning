@@ -1,0 +1,219 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block body_content %}
+
+{% comment %} Put Your Body Code Here Except for Header and Footer {% endcomment %}
+
+    <!-- ========================================================== -->
+
+    <div class="survey-bg">
+        <p class="heading">Personal Development</p>
+        <p class="heading">Suvey</p>
+        <p class="sub-heading">Thank you for participating in this personal professional development suvey. Your
+            feedback will help us understand your goals and challenges, allowing us to provide resorces tailored to your
+            need. Please answer the following questions honestly</p>
+    </div>
+
+    <!-- ========================================================== -->
+
+    <div class="professional">
+        <form action="">
+            <p class="heading">Introduction</p>
+            <p>Thank you for participating in this personal professional development suvey. Your
+                feedback will help us understand your goals and challenges, allowing us to provide resorces tailored to
+                your need. Please answer the following questions honestly</p>
+            <div class="personal section">
+                <p class="heading">Section 1: Personal Information</p>
+                <div class="q-row">
+                    <div class="row-input">
+                        <label for="name">1.1: Name (Optional)</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="row-input">
+                        <label for="job">1.2: Current Job Title</label>
+                        <input type="text" name="job" id="job">
+                    </div>
+                    <div class="row-input">
+                        <label for="experience">1.3: Years of Professional Experience</label>
+                        <input type="text" name="experience" id="experience">
+                    </div>
+                </div>
+            </div>
+            <div class="career section">
+                <p class="heading">Section 2: Personal Goals</p>
+                <div class="question">
+                    <p>2.1: What are primary developemnt prodfessional goals?</p>
+                    <div class="option">
+                        <input type="checkbox" id="goal1" name="goal1">
+                        <label for="goal1">Advancing in Current Role</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="goal2" name="goal2">
+                        <label for="goal2">Transitioning to a new role or industry</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="goal3" name="goal3">
+                        <label for="goal3">Enhancing Leadership Skills</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="goal4" name="goal4">
+                        <label for="goal4">Improving communication and collaboration</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="goal5" name="goal5">
+                        <label for="goal5">Developing technical skills</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="goal6" name="goal6">
+                        <label for="goal6">Expanding professional network</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="goal7" name="goal7">
+                        <label for="goal7">Other</label>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="career-goal">2.2: Please briefly describe one specific career goal you would like to
+                        achieve in next 12 months:</label>
+                    <textarea name="career-goal" id="career-goal"></textarea>
+                </div>
+                <div class="question">
+                    <label for="skills-goal">2.3: What skills you would need to achieve you ultimate career/professional
+                        goals?</label>
+                    <textarea name="skills-goal" id="career-goal"></textarea>
+                </div>
+            </div>
+            <div class="skills section">
+                <p class="heading">Section 3: Challenges and Obstacles</p>
+                <div class="question">
+                    <p>3.1: Rate your proficiency in the following skills on the scale of 1-5?</p>
+                    <p class="input">
+                        <label for="communication">Communication skills:</label>
+                        <select id="communication" name="communication">
+                            <option value="Experience">Experience</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </p>
+                    <p class="input">
+                        <label for="management">Project management:</label>
+                        <select id="management" name="management">
+                            <option value="Experience">Experience</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </p>
+                    <p class="input">
+                        <label for="problem">Problem solving:</label>
+                        <select id="problem" name="problem">
+                            <option value="Experience">Experience</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </p>
+                    <p class="input">
+                        <label for="leadership">Leadership:</label>
+                        <select id="leadership" name="leadership">
+                            <option value="Experience">Experience</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </p>
+                    <p class="input">
+                        <label for="relationship">Professional relationship:</label>
+                        <select id="relationship" name="relationship">
+                            <option value="Experience">Experience</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </p>
+                    <p class="input">
+                        <label for="technical">Technical skills:</label>
+                        <select id="technical" name="technical">
+                            <option value="Experience">Experience</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </p>
+                    <p class="input">
+                        <label for="collaboration">Team collaboration:</label>
+                        <select id="collaboration" name="collaboration">
+                            <option value="Experience">Experience</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </p>
+                    <p class="input">
+                        <label for="conflict">Resolving workspace conflict:</label>
+                        <select id="conflict" name="conflict">
+                            <option value="Experience">Experience</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Beginner">Beginner</option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+            <div class="prefernces section">
+                <p class="heading">Section 4: Challenges and Obstacles</p>
+                <div class="question">
+                    <p>4.1: What type of professional development activities do you find most benefical?</p>
+                    <div class="option">
+                        <input type="checkbox" id="activity1" name="activity1">
+                        <label for="activity1">In-person sessions</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="activity2" name="activity2">
+                        <label for="activity2">Virtual/Online sessions</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="activity3" name="activity3">
+                        <label for="activity3">Self-paced learning modules</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="activity4" name="activity4">
+                        <label for="activity4">Printed materials</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="activity5" name="activity5">
+                        <label for="activity5">Other</label>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback section">
+                <p class="heading">Section 5: Feedback and Suggestions</p>
+                <div class="question">
+                    <label for="challenges">5.1: What challeneges do you currently face in your professional developemnt:</label>
+                    <textarea name="challenges" id="challenges"></textarea>
+                </div>
+                <div class="question">
+                    <label for="support">5.2: How can the organization better support your professional growth and development?</label>
+                    <textarea name="support" id="support"></textarea>
+                </div>
+            </div>
+            <div class="opportunities section">
+                <p class="heading">Section 6: Future Opportunities</p>
+                <p class="input">
+                    <label for="program">Are you interested in participating in leadership developemnt program:</label>
+                    <select id="program" name="program">
+                        <option value="yes">Interested</option>
+                        <option value="no">Not Interested</option>
+                    </select>
+                </p>
+                <div class="question">
+                    <label for="areas">5.2: What specific areas of leadership developemnt interest you the most?</label>
+                    <textarea name="areas" id="areas"></textarea>
+                </div>
+            </div>
+            <div class="conclusion section">
+                <p class="heading">Conclusion</p>
+                <p>Thank you for completing in this personal professional development suvey. Your
+                    feedback will help us understand your goals and challenges, allowing us to provide resorces tailored to your
+                    need.</p>
+            </div>
+        </form>
+    </div>
+
+    <!-- ========================================================== -->
+
+{% endblock body_content %}

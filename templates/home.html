@@ -1,0 +1,270 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block body_content %}
+
+{% comment %} Put Your Body Code Here Except for Header and Footer {% endcomment %}
+
+<!-- ========================================================== -->
+
+<div class="hero-section">
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="{% static "images/hero1.jpg" %}">
+            <div class="text">
+                <p class="heading">Welcome to Pivot Point Learning</p>
+                <p class="sub-heading">Helping you to transform into your best self at work and in life</p>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <img src="{% static "images/hero2.jpg" %}">
+            <div class="text">
+                <p class="heading">Welcome to Pivot Point Learning</p>
+                <p class="sub-heading">Helping you to transform into your best self at work and in life</p>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <img src="{% static "images/hero3.jpg" %}">
+            <div class="text">
+                <p class="heading">Welcome to Pivot Point Learning</p>
+                <p class="sub-heading">Helping you to transform into your best self at work and in life</p>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <img src="{% static "images/hero4.jpeg" %}">
+            <div class="text">
+                <p class="heading">Welcome to Pivot Point Learning</p>
+                <p class="sub-heading">Helping you to transform into your best self at work and in life</p>
+            </div>
+        </div>
+
+        <div class="nav-arrows">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+
+    <div class="domains">
+        <div class="field">
+            <i class="fa-solid fa-rocket"></i>
+            <p>Science and Engineering</p>
+        </div>
+        <div class="field">
+            <i class="fa-solid fa-earth-americas"></i>
+            <p>Science and Engineering</p>
+        </div>
+        <div class="field">
+            <i class="fa-regular fa-face-smile"></i>
+            <p>Science and Engineering</p>
+        </div>
+        <div class="field">
+            <i class="fa-solid fa-tag"></i>
+            <p>Science and Engineering</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- ========================================================== -->
+
+<div class="courses-section">
+    <div class="text">
+        <p class="heading">Popular Free Courses</p>
+        <p class="sub-heading">There is a moment in the life of any aspiping astronomer that is time to buy first
+            telescope. It's exciting to think about to setting up your own viewing station.</p>
+    </div>
+
+    <div class="courses">
+        <div class="course-grid">
+            <div class="course-row">
+                <div class="course large">
+                    <img src="{% static "images/course1.jpg" %}" alt="Free Course">
+                    <div class="info">
+                        <p class="tag">Free</p>
+                        <p class="title">Japanese Language Class</p>
+                        <div class="details">
+                            <div class="views">
+                                <i class="fa-solid fa-user-group"></i>
+                                <p>355</p>
+                            </div>
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>35</p>
+                            </div>
+                            <div class="author">
+                                <i class="fa-regular fa-user"></i>
+                                <p>T.Robert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course small">
+                    <img src="{% static "images/course2.jpg" %}" alt="Free Course">
+                    <div class="info">
+                        <p class="tag">Free</p>
+                        <p class="title">Japanese Language Class</p>
+                        <div class="details">
+                            <div class="views">
+                                <i class="fa-solid fa-user-group"></i>
+                                <p>355</p>
+                            </div>
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>35</p>
+                            </div>
+                            <div class="author">
+                                <i class="fa-regular fa-user"></i>
+                                <p>T.Robert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-row">
+                <div class="course small">
+                    <img src="{% static "images/course3.jpg" %}" alt="Free Course">
+                    <div class="info">
+                        <p class="tag">Free</p>
+                        <p class="title">Japanese Language Class</p>
+                        <div class="details">
+                            <div class="views">
+                                <i class="fa-solid fa-user-group"></i>
+                                <p>355</p>
+                            </div>
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>35</p>
+                            </div>
+                            <div class="author">
+                                <i class="fa-regular fa-user"></i>
+                                <p>T.Robert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course large">
+                    <img src="{% static "images/course4.jpg" %}" alt="Free Course">
+                    <div class="info">
+                        <p class="tag">Free</p>
+                        <p class="title">Japanese Language Class</p>
+                        <div class="details">
+                            <div class="views">
+                                <i class="fa-solid fa-user-group"></i>
+                                <p>355</p>
+                            </div>
+                            <div class="comments">
+                                <i class="fa-regular fa-comment"></i>
+                                <p>35</p>
+                            </div>
+                            <div class="author">
+                                <i class="fa-regular fa-user"></i>
+                                <p>T.Robert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="course-col">
+            <div class="course">
+                <img src="{% static "images/course5.jpg" %}" alt="Free Course">
+                <div class="info">
+                    <p class="tag">Free</p>
+                    <p class="title">Japanese Language Class</p>
+                    <div class="details">
+                        <div class="views">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>355</p>
+                        </div>
+                        <div class="comments">
+                            <i class="fa-regular fa-comment"></i>
+                            <p>35</p>
+                        </div>
+                        <div class="author">
+                            <i class="fa-regular fa-user"></i>
+                            <p>T.Robert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================================== -->
+
+<div class="limitless-learning">
+    <div class="text">
+        <p class="heading">Built On Limitless Learning with Modern Technologies</p>
+        <p class="sub-heading"> At vero eos torem ipsum dolor sit amet consectetur adipisicing elit. Delectus, in. Nobis
+            modi imilique ullam debitis quidem atque sint libero, animi repudiandae.</p>
+        <div class="awards-success">
+            <div>
+                <p class="number">45%</p>
+                <p class="title">Winning Awards</p>
+                <p class="description">All our sporting events are universiy calendar</p>
+            </div>
+            <div>
+                <p class="number">90%</p>
+                <p class="title">Success Story</p>
+                <p class="description">All our sporting events are universiy calendar</p>
+            </div>
+        </div>
+    </div>
+    <div class="img">
+        <img src="{% static "images/learning.jpeg" %}">
+    </div>
+</div>
+
+<!-- ========================================================== -->
+
+<div class="blog-posts">
+    <p class="heading">Latest Posts From Blog</p>
+    <p class="sub-heading">There is a moment in the life of any aspiping astronomer that is time to buy first
+        telescope. It's exciting to think about to setting up your own viewing station.</p>
+    <div class="posts-grid">
+        <div class="post">
+            <img src="{% static "images/course3.jpg" %}" alt="Blog Post">
+            <p class="date">25 October, 2018 | By Mark Weins</p>
+            <p class="title">Addiction When Gambling Becomes A Problem</p>
+            <p class="description">Computers have become ubiquitous in almost every facet of our lives, At work desk,
+                jockeys spend hours at front of their desktops, while delivery</p>
+        </div>
+        <div class="post">
+            <img src="{% static "images/course1.jpg" %}" alt="Blog Post">
+            <p class="date">25 October, 2018 | By Mark Weins</p>
+            <p class="title">Addiction When Gambling Becomes A Problem</p>
+            <p class="description">Computers have become ubiquitous in almost every facet of our lives, At work desk,
+                jockeys spend hours at front of their desktops, while delivery</p>
+        </div>
+        <div class="post">
+            <img src="{% static "images/hero1.jpg" %}" alt="Blog Post">
+            <p class="date">25 October, 2018 | By Mark Weins</p>
+            <p class="title">Addiction When Gambling Becomes A Problem</p>
+            <p class="description">Computers have become ubiquitous in almost every facet of our lives, At work desk,
+                jockeys spend hours at front of their desktops, while delivery</p>
+        </div>
+        <div class="post">
+            <img src="{% static "images/course4.jpg" %}" alt="Blog Post">
+            <p class="date">25 October, 2018 | By Mark Weins</p>
+            <p class="title">Addiction When Gambling Becomes A Problem</p>
+            <p class="description">Computers have become ubiquitous in almost every facet of our lives, At work desk,
+                jockeys spend hours at front of their desktops, while delivery</p>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================================== -->
+
+
+{% endblock body_content %}

@@ -1,0 +1,71 @@
+{% load static %}
+
+
+
+<div class="instructor">
+    <p class="heading">BECOME AN INSTRUCTOR</p>
+    <p class="sub-heading">There is a moment in the life of any aspiping astronomer that is time to buy first
+        telescope. It's exciting to think about to setting up your own viewing station.</p>
+    <a href="">Apply for the post</a>
+</div>
+
+<footer>
+    <div class="columns">
+
+        <div class="column">
+            <p class="subtitle">Quick Links</p>
+            <ul>
+                <li><a href={% url 'home' %}>Home</a></li>
+                <li><a href={% url 'about' %}>About</a></li>
+                <li><a href={% url 'personalized_learning' %}>Personalized Learning</a></li>
+                <li><a href={% url 'resources' %}>Resources</a></li>
+                <li><a href={% url 'contact' %}>Contact</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <p class="subtitle">Self Discovery AI Labs</p>
+            <ul>
+                <li><a href="{% url 'survey1' %}">Survey 1</a></li>
+                <li><a href="{% url 'survey2' %}">Survey 2</a></li>
+            </ul>
+        </div>
+
+        <div class="column menus">
+            <div class="contact-us-menu">
+                <p class="subtitle">Contact Details</p>
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>123 Main Street, CityVille</p>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+1 234 567 872</p>
+                </div>
+                <div class="email">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>info@pivot.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column newsletter">
+            <p class="subtitle">Newsletter</p>
+            <ul>
+                <li>Stay update with our latest trends</li>
+                <li>
+                    <input type="email" name="email" id="email" placeholder="Enter email address">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="social-links">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-brands fa-behance"></i>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2024 All Rights Reserved</p>
+    </div>
+</footer>

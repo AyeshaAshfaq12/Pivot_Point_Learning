@@ -1,0 +1,27 @@
+{% load static %}
+
+<header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="{% static "images/logo1.png" %}" alt="Pivot Learning">
+        </a>
+      </div>
+      <label for="input-hamburger" class="hamburger "></label>
+      <input type="checkbox" id="input-hamburger" hidden>
+      <div class="menu">
+        {% with request.resolver_match.url_name as url_name %}
+        <ul>
+          <li><a class="{% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">HOME</a></li>
+          <li><a class="{% if url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">ABOUT</a></li>
+          <li><a class="{% if url_name == 'personalized_learning' %}active{% endif %}" href="{% url 'personalized_learning' %}">PERSONALIZED LEARNING</a></li>
+          <li><a class="{% if url_name == 'resources' %}active{% endif %}" href="{% url 'resources' %}">RESOURCES</a></li>
+          <li><a class="{% if url_name == 'survey1' %}active{% endif %}" href="{% url 'survey1' %}">SELF-DISCOVERY AI LAB</a></li>
+          <li><a class="{% if url_name == 'contact' %}active{% endif %}" href="{% url 'contact' %}">CONTACT</a></li>
+        </ul>
+        {% endwith %}
+      </div>
+    </nav>
+</header>
+
+
